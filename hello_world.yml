@@ -1,6 +1,8 @@
 - name: Hello World Sample
   hosts: all
   tasks:
+    - debug: var=tower_webhook_payload["pull_request"]["base"]["ref"]
+
     - name: Hello Message
       debug:
         msg: "Hello World!"
